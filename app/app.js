@@ -17,7 +17,7 @@ app.get('/', async (req, res) => {
         '<link rel="stylesheet" type="text/css" href="/styles.css">' +
         '</head>' +
         '<body>' +
-        '<h1>' + 'Concert Weather Information' + '</h1>' +
+        '<h1>' + 'Event Information' + '</h1>' +
         '<form action="/search" method="get">' +
         '<label for="city">City:</label>' +
         '<input type="text" id="city" name="query" required>' +
@@ -31,7 +31,7 @@ app.get('/', async (req, res) => {
         '<button type="submit">Search</button>' +
         '</form>' +
         '<ul>' +
-        '<li>Query - Please enter a city to see what concerts are on and the expected weather for the event</li>' +
+        '<li>Query - Please enter a city to see what concerts are on as well as the expected weather and map data for the event</li>' +
         '<li>Preferred Conditions - Please select which weather condition you would like to filter by (can be left blank)</li>' +
         '<li>(BETA) number - max number of results returned, the weather API has a limit of 50 calls per day, please keep calls below 5</li>' +
         '</ul>' +
