@@ -7,7 +7,7 @@ const AWS = require("aws-sdk");
 // secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
 // sessionToken: process.env.AWS_SESSION_TOKEN,
 //  region: "ap-southeast-2",
-});
+//});
 
 // Create an S3 client
 const s3 = new AWS.S3();
