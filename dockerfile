@@ -6,6 +6,10 @@ FROM node:20
 # Path in the container where the application files will go
 WORKDIR /usr/src/app
 
+ENV GOO_KEY=apikey1
+ENV TIK_KEY=apikey2
+ENV WET_KEY=apikey3
+
 # Copy in the package files and install required packages
 COPY app/package*.json ./
 RUN npm install
