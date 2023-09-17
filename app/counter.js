@@ -1,12 +1,12 @@
 const AWS = require("aws-sdk");
-require("dotenv").config();
+//require("dotenv").config();
 
 // Configure AWS SDK (replace with your own credentials from the AWS console)
-AWS.config.update({
-  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-  sessionToken: process.env.AWS_SESSION_TOKEN,
-  region: "ap-southeast-2",
+//AWS.config.update({
+// accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+// secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+// sessionToken: process.env.AWS_SESSION_TOKEN,
+//  region: "ap-southeast-2",
 });
 
 // Create an S3 client
