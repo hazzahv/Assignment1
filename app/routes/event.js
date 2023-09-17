@@ -4,7 +4,7 @@ const axios = require('axios');
 const router = express.Router();
 
 // Your Google Maps API Key
-const googleMapsApiKey = 'AIzaSyDuHnPAe7MViB1UcGgHYuVf54Wtqa9dmmA';
+const googleMapsApiKey = process.env.GOO_KEY;
 
 router.get('/', async (req, res) => {
     const query = req.query.query;
@@ -75,13 +75,13 @@ router.get('/', async (req, res) => {
 });
 
 function fetchTicketmasterData(city, number) {
-    const apiKey = 'kQ0FxlRI4pdWxWKzVAQShGogxysIDOVr';
+    const apiKey = process.env.TIK_KEY;
     const url = `https://app.ticketmaster.com/discovery/v2/events.json?keyword=${city}&size=${number}&apikey=${apiKey}`;
     return axios.get(url).then((response) => response.data);
 }
 
 async function fetchWeatherData(city, date) {
-    const apiKey = 'ceb0068285c8456689bd3bcd8f06c2b1';
+    const apiKey = process.env.WET_KEY;
     const dateString = date.toISOString().split('T')[0];
     const url = `https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&start_date=${dateString}&end_date=${dateString}&key=${apiKey}`;
     const response = await axios.get(url);
